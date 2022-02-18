@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 24px;
+  align-items: center;
+  margin: 0 59.6px;
+  padding: 0 32px;
+  flex-wrap: nowrap;
+  height: 80px;
+}
+#headers {
+}
+.header__right {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 24px;
+  margin: 0 0 0 16px;
+}
