@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <Header />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
