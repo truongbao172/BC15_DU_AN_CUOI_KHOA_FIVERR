@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Header.css";
 export default function Header() {
   return (
-    <div
-      id="header"
-      //  class="fixed-top "
-    >
-      <nav className="navbar navbar-expand-md  navbar-light ">
+    <div id="header" class="fixed-top ">
+      <nav className="navbar navbar-expand-md   ">
         {/* Brand */}
         <div className="header__left">
           <div className="fiverr__logo">
@@ -63,7 +60,7 @@ export default function Header() {
         </button>
         {/* Navbar links */}
         <div
-          className="collapse navbar-collapse header__right"
+          className="collapse navbar-collapse header__right "
           id="collapsibleNavbar"
         >
           <ul className="navbar-nav">
@@ -73,7 +70,7 @@ export default function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link " href="#">
                 Explore
               </a>
             </li>

@@ -43,6 +43,9 @@ svg {
 a {
   outline: 0;
 }
+#header {
+  background-color: #00000000;
+}
 .navbar-light .navbar-nav .nav-link {
   color: black;
 }
@@ -66,7 +69,9 @@ a {
 .header__left {
   display: flex;
 }
-
+.header__left svg path {
+  fill: white !important;
+}
 .form-control:focus {
   box-shadow: none;
 }
@@ -188,7 +193,7 @@ a {
   height: 24px;
 }
 .navbar .navbar-nav > .nav-item > .nav-link {
-  color: #7a7d85;
+  color: white;
   font-weight: 600;
   font-family: Macan;
   height: 16px;
@@ -200,6 +205,9 @@ a {
   line-height: 24px;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
+}
+.navbar .navbar-nav > .nav-item > .nav-link svg path {
+  fill: white;
 }
 @media (min-width: 992px) {
   .navbar .navbar-nav > .nav-item > .nav-link {
@@ -247,4 +255,7 @@ a {
 }
 .navbar .navbar-nav > .join-btn > .nav-link:active {
   background: #168a53;
+}
+.header-color-scroll {
+  color: black !important;
 }
