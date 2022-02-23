@@ -1,0 +1,11 @@
+#Testimo_slick .slick-next {
+  right: 10% !important;
+  z-index: 99;
+}
+#Testimo_slick .slick-prev {
+  left: 7% !important;
+  z-index: 99;
+}
+#Testimo_slick {
+  margin-bottom: 100px;
+}

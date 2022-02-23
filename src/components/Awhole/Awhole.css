@@ -1,0 +1,46 @@
+.awhole_left h2 {
+  padding-bottom: 24px;
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #404145;
+}
+.awhole_left {
+  padding-right: 11%;
+}
+.awhole {
+  background-color: #f1fdf7;
+  margin: 0 auto 48px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+ol,
+ul {
+  list-style: none;
+  list-style-image: none;
+}
+.awhole_left li h6 {
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #404145;
+
+  font-size: 18px;
+  padding-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.awhole_left li h6 span {
+  width: 24px;
+  height: 24px;
+  fill: rgb(122, 125, 133);
+}
+
+.tbody-4 {
+  font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #62646a;
+  font-size: 18px;
+  line-height: 20px;
+}

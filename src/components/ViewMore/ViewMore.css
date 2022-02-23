@@ -1,0 +1,51 @@
+.slick-prev:before,
+.slick-next:before {
+  color: gray !important;
+}
+.container {
+  max-width: 1300px;
+}
+.slick-prev {
+  left: -8px !important;
+  z-index: 99;
+}
+.slick-next {
+  right: 8px !important;
+  z-index: 99;
+}
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev:before {
+  font-size: 40px !important;
+}
+.slick-next:before {
+  font-size: 40px !important;
+}
+.slick-track {
+  min-width: 100%;
+}
+.fix h2 {
+  padding-bottom: 5px;
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #404145;
+}
+.fix {
+  margin-bottom: 100px;
+}

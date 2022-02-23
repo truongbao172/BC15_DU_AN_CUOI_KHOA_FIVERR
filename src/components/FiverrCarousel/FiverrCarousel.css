@@ -1,27 +1,25 @@
-.ant-carousel .slick-dots li button {
-}
-.Carousel {
+#Carousel {
   position: relative;
   width: 100%;
   height: 680px;
   z-index: 1;
   margin-bottom: 200px;
 }
-.ant-carousel {
+#Carousel .ant-carousel {
   width: 100%;
   height: 680px;
 }
-.carousel-img {
+#Carousel .carousel-img {
   width: 100%;
   height: 680px;
 }
-.carousel-img img {
+#Carousel .carousel-img img {
   width: 100%;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.Overlay {
+#Carousel .Overlay {
   position: absolute;
   width: 100%;
   height: 100%;

@@ -1,0 +1,135 @@
+#Business {
+  background-color: #0d084d;
+  margin-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+#Business .tbody-4 {
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+}
+@media only screen and (min-width: 900px) {
+  #Business .tbody-4 {
+    padding-bottom: 25px;
+    max-width: 450px;
+  }
+}
+.fiverr-business-logo svg {
+  width: 178px;
+  height: 22px;
+}
+.fmFFGHM.RGte4qL.rv\+rROO {
+  background: #584aff;
+}
+.fmFFGHM {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 3px 7px 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 100%;
+}
+.fmFFGHM.h18IWLb {
+  text-transform: uppercase;
+}
+.fmFFGHM.RGte4qL {
+  border-color: #584aff;
+}
+.fiverr-business-logo {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.FB_title h2 {
+  max-width: 450px;
+  color: #fff;
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+@media only screen and (min-width: 900px) {
+  .FB_title h2 {
+    padding-bottom: 24px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .FB_title h2 {
+    max-width: 450px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .FB_title h2 {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+.FB_list_ul ul {
+  margin-bottom: 48px;
+}
+.FB_list_ul ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 16px;
+  color: #fff;
+  font: 400 18px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.FB_list_ul li .check-icon {
+  margin-right: 10px;
+  min-width: 24px;
+}
+.lFICM06 {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  fill: #7a7d85;
+}
+.FB_right_img img {
+  width: 100%;
+  height: 100%;
+}
+a.btn_bussiness {
+  text-decoration: none;
+}
+.btn_bussiness {
+  background-color: #1dbf73;
+  color: #fff;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 70ms cubic-bezier(0.75, 0, 0.25, 1);
+  -o-transition: 70ms cubic-bezier(0.75, 0, 0.25, 1);
+  transition: 70ms cubic-bezier(0.75, 0, 0.25, 1);
+}
+a.btn_bussiness:hover {
+  background: #19a463;
+  color: white;
+}

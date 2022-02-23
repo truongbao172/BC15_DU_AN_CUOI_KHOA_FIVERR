@@ -1,0 +1,41 @@
+#Pro_item {
+  position: relative;
+  width: 239px;
+  height: 345px;
+  background-color: #efeff0;
+}
+.Pro_header {
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+}
+.Pro_img img {
+  object-fit: cover;
+  height: 345px;
+  width: 100%;
+  border-radius: 4px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+}
+.Pro_header h4 {
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  /* position: relative; */
+  z-index: 1;
+  color: #fff;
+  padding: 16px;
+  font-size: 24px;
+}
+.Pro_header h4 small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  display: block;
+}
+#Pro_item:hover {
+  opacity: 0.85;
+}

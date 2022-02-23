@@ -1,11 +1,8 @@
 import React from "react";
-import CardViewMore from "./CardViewMore";
-import "./ViewMore.css";
+import Proitem from "./Proitem";
+import "./ProService.css";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-export default function ViewMore() {
+export default function ProService() {
   const settings = {
     dots: false,
     infinite: true,
@@ -26,25 +23,25 @@ export default function ViewMore() {
   };
   return (
     <div className="container fix">
-      <h2>Recently Viewed & More</h2>
+      <h2>Popular professional services</h2>
       <Slider {...settings}>
         <div>
-          <CardViewMore />
+          <Proitem />
         </div>
         <div>
-          <CardViewMore />
+          <Proitem />
         </div>
         <div>
-          <CardViewMore />
+          <Proitem />
         </div>
         <div>
-          <CardViewMore />
+          <Proitem />
         </div>
         <div>
-          <CardViewMore />
+          <Proitem />
         </div>
         <div>
-          <CardViewMore />
+          <Proitem />
         </div>
       </Slider>
     </div>
