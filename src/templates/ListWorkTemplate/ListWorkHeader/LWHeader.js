@@ -1,29 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./Header.css";
-export default function Header(props) {
-  let scrollClass = "trcscroll";
-  const [offset, setOffset] = useState(0);
+import "./LWHeader.css";
+export default function LWHeader(props) {
+  //   let scrollClass = "trcscroll";
+  //   const [offset, setOffset] = useState(0);
 
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  //   useEffect(() => {
+  //     const onScroll = () => setOffset(window.pageYOffset);
+  //     // clean up code
+  //     window.removeEventListener("scroll", onScroll);
+  //     window.addEventListener("scroll", onScroll, { passive: true });
+  //     return () => window.removeEventListener("scroll", onScroll);
+  //   }, []);
 
   // console.log(offset);
   return (
     <div>
-      <div id="header" className={`fixed-top ${offset > 0 ? "scroll" : " "}`}>
+      <div id="LWheader" className="mb-5">
         <nav className="navbar navbar-expand-md ">
           {/* Brand */}
-          <div
-            className={`header__left ${
-              offset > 0 ? "header__leftScroll" : " "
-            }`}
-          >
+          <div className="lwheader__left">
             <div className="fiverr__logo">
               <NavLink className="navbar-brand" className="fiverr__logo" to="/">
                 <svg
@@ -46,7 +42,7 @@ export default function Header(props) {
                 </svg>
               </NavLink>
             </div>
-            <div className={`search ml-2 ${offset > 0 ? "searchScroll" : " "}`}>
+            <div className="search ml">
               <form>
                 <span>
                   <svg
@@ -87,26 +83,17 @@ export default function Header(props) {
           >
             <ul className="navbar-nav">
               <li class="nav-item">
-                <NavLink
-                  class={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/"
-                >
+                <NavLink class="nav-link " to="/">
                   Fiverr Business
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/about"
-                >
+                <NavLink className="nav-link" to="/about">
                   Explore
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/contact"
-                >
+                <NavLink className="nav-link" to="/contact">
                   <span style={{ paddingRight: "5px" }}>
                     <svg
                       className="me-2"
@@ -125,47 +112,33 @@ export default function Header(props) {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="#"
-                >
+                <NavLink className="nav-link " to="#">
                   US $USD
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="#"
-                >
+                <NavLink className="nav-link " to="#">
                   Become a Seller
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/sign"
-                >
+                <NavLink className="nav-link " to="/sign">
                   Sign In
                 </NavLink>
               </li>
               <li className="nav-item join-btn">
-                <NavLink
-                  className={`nav-link join-link ${
-                    offset > 0 ? "navL_scroll" : " "
-                  }`}
-                  to="/join"
-                >
+                <NavLink className="nav-link join-link" to="/join">
                   Join
                 </NavLink>
               </li>
             </ul>
           </div>
         </nav>
-        <div className={`bt_header ${offset > 0 ? "bt_headerScroll" : " "}`}>
+        <div className="bt_header ">
           <ul className="nav justify-content-center">
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <NavLink to="/listwork" className="dropbtn">
+                <NavLink className="dropbtn" to="/listwork">
                   Graphics & Design
                 </NavLink>
                 <div className="dropdown-content">
@@ -179,7 +152,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Digital Marketing</button>
+                <NavLink className="dropbtn" to="/about">
+                  Digital Marketing
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -191,7 +166,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Writing & Translation</button>
+                <NavLink className="dropbtn" to="/about">
+                  Writing & Translation
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -203,7 +180,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Video & Animation</button>
+                <NavLink className="dropbtn" to="/about">
+                  Video & Animation
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -215,7 +194,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Music & Audio</button>
+                <NavLink className="dropbtn" to="/about">
+                  Music & Audio
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -227,7 +208,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Programming & Tech</button>
+                <NavLink className="dropbtn" to="/about">
+                  Programming & Tech
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -239,7 +222,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Business</button>
+                <NavLink className="dropbtn" to="/about">
+                  Business
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -251,7 +236,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Lifestyle</button>
+                <NavLink className="dropbtn" to="/about">
+                  Lifestyle
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
@@ -263,7 +250,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Trending</button>
+                <NavLink className="dropbtn" to="/about">
+                  Trending
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>

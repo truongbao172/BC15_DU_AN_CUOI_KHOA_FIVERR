@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
-
-export default function CardViewMore() {
+export default function CardViewMore(props) {
+  // console.log("du leu", props.item.image);
   return (
     <div>
       <div id="card_view_more" className="card">
@@ -16,9 +16,9 @@ export default function CardViewMore() {
               {/* The slideshow */}
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src="./img/awz1himolvtv6dhrtj90.png" alt=".." />
+                  <img src={props.item?.image} alt=".." />
                 </div>
-                <div className="carousel-item">
+                {/* <div className="carousel-item">
                   <img
                     src="./img/b3f15d96e051580b816891a95fe5aad3964a6a13.jpg"
                     alt=".."
@@ -26,10 +26,10 @@ export default function CardViewMore() {
                 </div>
                 <div className="carousel-item">
                   <img src="./img/bgvxwwjvtnebleeupcdn.png" alt="." />
-                </div>
+                </div> */}
               </div>
               {/* Left and right controls */}
-              <a
+              {/* <a
                 className="carousel-control-prev"
                 href="#bscarousel"
                 data-slide="prev"
@@ -42,25 +42,32 @@ export default function CardViewMore() {
                 data-slide="next"
               >
                 <span className="carousel-control-next-icon" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
         <div className="card-body">
           <div className="card_name row">
             <div className="col-3 c-avatar">
-              <img src="  https://source.unsplash.com/random " alt="" />{" "}
+              <img
+                src={props.item.subType?.image}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = " https://source.unsplash.com/random";
+                }}
+                alt=""
+              />
             </div>
 
             <div className="col-9 c-name">
               <h6>
-                <a>momomaroc</a>
+                <a>{props.item.subType?.name}</a>
               </h6>
               <span>Lever 2 seller</span>
             </div>
           </div>
           <div className="card_title">
-            <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+            <a>{props.item.name}</a>
           </div>
           <div className="c_rate">
             <ul>
@@ -80,7 +87,7 @@ export default function CardViewMore() {
               </li>
               <li>
                 {" "}
-                <a>5.0</a>
+                <a>{props.item.rating}</a>
               </li>
               <li>
                 {" "}
@@ -105,7 +112,7 @@ export default function CardViewMore() {
           <div className="c-footer-right">
             <a>
               <small>Starting at</small>
-              <span>US$25</span>
+              <span>US${props.item.price}</span>
             </a>
           </div>
         </div>

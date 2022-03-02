@@ -9,18 +9,18 @@ import ProService from "../components/ProService/ProService";
 import Testimo from "../components/Testimonials/Testimo";
 import ViewMore from "../components/ViewMore/ViewMore";
 
-export default function HomePage() {
+export default function HomePage(props) {
   return (
     <div>
-      <Header />
-      <FiverrCarousel />
+      {/* <Header /> */}
+      {/* <FiverrCarousel /> */}
       <ViewMore />
       <ProService />
       <Awhole />
       <Explore />
       <Business />
       <Testimo />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
