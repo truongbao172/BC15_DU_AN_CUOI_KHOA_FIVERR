@@ -152,7 +152,7 @@ export default function LWHeader(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <NavLink className="dropbtn" to="/about">
+                <NavLink className="dropbtn" to="/listworktypejob">
                   Digital Marketing
                 </NavLink>
                 <div className="dropdown-content">

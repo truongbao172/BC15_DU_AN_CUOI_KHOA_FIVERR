@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CardViewMore from "../components/ViewMore/CardViewMore";
 import _ from "lodash";
-import axios from "axios";
+import Axios from "axios";
 import { Pagination } from "antd";
 export default function ListWorkPage(props) {
   const { arrCard } = useSelector((state) => state.DanhSachCongViecReducer);
@@ -13,7 +13,7 @@ export default function ListWorkPage(props) {
 
   useEffect(async () => {
     try {
-      const result = await axios({
+      const result = await Axios({
         url: "https://fiverr.cybersoft.edu.vn/api/jobs",
         method: "GET",
         headers: {
@@ -22,7 +22,7 @@ export default function ListWorkPage(props) {
         },
       });
       //đưa len reducer
-      console.log("result", result);
+      // console.log("result", result);
       dispatch({
         type: "GET_DSCV",
         arrCard: result.data,

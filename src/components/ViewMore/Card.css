@@ -6,7 +6,12 @@
 .card {
   width: 270px;
 }
-
+.slick-dots li button:before {
+  font-size: 0 !important;
+}
+.slick-dots {
+  width: 67% !important;
+}
 .card-header {
   padding: 0;
 }

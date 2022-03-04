@@ -1,6 +1,15 @@
+import { Carousel } from "antd";
+import "antd/dist/antd.css";
 import React from "react";
 import "./Card.css";
 export default function CardViewMore(props) {
+  const contentStyle = {
+    // height: "160px",
+    // color: "#fff",
+    // lineHeight: "160px",
+    // textAlign: "center",
+    // background: "#364d79",
+  };
   // console.log("du leu", props.item.image);
   return (
     <div>
@@ -14,21 +23,24 @@ export default function CardViewMore(props) {
                 <li data-target="#2" data-slide-to={2} />
               </ul> */}
               {/* The slideshow */}
-              <div className="carousel-inner">
+              {/* <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img src={props.item?.image} alt=".." />
                 </div>
-                {/* <div className="carousel-item">
-                  <img
-                    src="./img/b3f15d96e051580b816891a95fe5aad3964a6a13.jpg"
-                    alt=".."
-                  />
-                </div>
                 <div className="carousel-item">
-                  <img src="./img/bgvxwwjvtnebleeupcdn.png" alt="." />
-                </div> */}
-              </div>
-              {/* Left and right controls */}
+                  <img src={props.item?.image} alt=".." />
+                </div>
+              </div> */}
+              <Carousel afterChange={onchange} autoplay>
+                <div className="carousel-item active" style={contentStyle}>
+                  <img src={props.item?.image} alt=".." />
+                </div>
+
+                <div className="carousel-item " style={contentStyle}>
+                  <img src={props.item?.image} alt=".." />
+                </div>
+              </Carousel>
+
               {/* <a
                 className="carousel-control-prev"
                 href="#bscarousel"
@@ -53,7 +65,7 @@ export default function CardViewMore(props) {
                 src={props.item.subType?.image}
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = " https://source.unsplash.com/random";
+                  e.target.src = "https://source.unsplash.com/random";
                 }}
                 alt=""
               />

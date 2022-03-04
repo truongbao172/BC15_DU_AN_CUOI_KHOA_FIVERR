@@ -179,7 +179,9 @@ export default function Header(props) {
             </li>
             <li className="nav-item pading_li">
               <div className="dropdown">
-                <button className="dropbtn">Digital Marketing</button>
+                <NavLink className="dropbtn" to="/listworktypejob">
+                  Digital Marketing
+                </NavLink>
                 <div className="dropdown-content">
                   <NavLink to="#">Link 1</NavLink>
                   <NavLink to="#">Link 1</NavLink>
