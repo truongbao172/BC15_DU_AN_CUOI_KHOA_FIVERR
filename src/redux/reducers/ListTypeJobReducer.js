@@ -1,4 +1,4 @@
-const stateDefault = {
+const initialState = {
   arrListJob: [
     {
       subTypeJobs: [
@@ -42,13 +42,19 @@ const stateDefault = {
       __v: 22,
     },
   ],
+  arrLWMain: [],
 };
 
-export default (state = stateDefault, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case "GET_TYPEJOB": {
-      console.log("hello");
       state.arrListJob = action.arrListJob;
+
+      return { ...state };
+    }
+    case "GET_WORKMAIN": {
+      state.arrLWMain = action.arrLWMain;
+
       return { ...state };
     }
 

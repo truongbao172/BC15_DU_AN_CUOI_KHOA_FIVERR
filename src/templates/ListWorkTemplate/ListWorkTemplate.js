@@ -12,6 +12,7 @@ export const LWTemplate = (props) => {
         return (
           <Fragment>
             <LWHeader />
+
             <Component {...propsRoute} />
             <Footer />
           </Fragment>

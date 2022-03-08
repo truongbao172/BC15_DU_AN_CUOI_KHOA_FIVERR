@@ -20,8 +20,11 @@ export default function LWHeader(props) {
         <nav className="navbar navbar-expand-md ">
           {/* Brand */}
           <div className="lwheader__left">
-            <div className="fiverr__logo">
-              <NavLink className="navbar-brand" className="fiverr__logo" to="/">
+            <div
+              className="fiverr__logo"
+              style={{ transform: "translateY(40%)" }}
+            >
+              <NavLink className="navbar-brand fiverr__logo" to="/">
                 <svg
                   width="89"
                   height="27"

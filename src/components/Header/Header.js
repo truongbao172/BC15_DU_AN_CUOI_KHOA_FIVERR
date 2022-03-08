@@ -25,7 +25,7 @@ export default function Header(props) {
             }`}
           >
             <div className="fiverr__logo">
-              <NavLink className="navbar-brand" className="fiverr__logo" to="/">
+              <NavLink className="navbar-brand fiverr__logo" to="/">
                 <svg
                   width="89"
                   height="27"

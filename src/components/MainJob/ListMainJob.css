@@ -9,6 +9,9 @@
   height: 100%;
   border-radius: 10px;
 }
+#main_job .card .card-title a {
+  color: black;
+}
 *,
 *::before,
 *::after {
