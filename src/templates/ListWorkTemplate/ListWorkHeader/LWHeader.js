@@ -91,12 +91,12 @@ export default function LWHeader(props) {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/404">
                   Explore
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <NavLink className="nav-link" to="/404">
                   <span style={{ paddingRight: "5px" }}>
                     <svg
                       className="me-2"
@@ -115,12 +115,12 @@ export default function LWHeader(props) {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="#">
+                <NavLink className="nav-link " to="/404">
                   US $USD
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="#">
+                <NavLink className="nav-link " to="/404">
                   Become a Seller
                 </NavLink>
               </li>

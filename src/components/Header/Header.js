@@ -97,7 +97,7 @@ export default function Header(props) {
               <li className="nav-item">
                 <NavLink
                   className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/about"
+                  to="/404"
                 >
                   Explore
                 </NavLink>
@@ -105,7 +105,7 @@ export default function Header(props) {
               <li className="nav-item">
                 <NavLink
                   className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/contact"
+                  to="/404"
                 >
                   <span style={{ paddingRight: "5px" }}>
                     <svg
@@ -127,7 +127,7 @@ export default function Header(props) {
               <li className="nav-item">
                 <NavLink
                   className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="#"
+                  to="/404"
                 >
                   US $USD
                 </NavLink>
@@ -135,7 +135,7 @@ export default function Header(props) {
               <li className="nav-item">
                 <NavLink
                   className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="#"
+                  to="/404"
                 >
                   Become a Seller
                 </NavLink>

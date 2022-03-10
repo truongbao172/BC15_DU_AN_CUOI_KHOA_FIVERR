@@ -12,7 +12,10 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+import "./SignIn.css";
+import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+import { dangNhapAction } from "../redux/action/QuanLyNguoiDungAction";
 function Copyright(props) {
   return (
     <Typography
@@ -34,16 +37,31 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn(props) {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   // eslint-disable-next-line no-console
+  //   console.log({
+  //     email: data.get("email"),
+  //     password: data.get("password"),
+  //   });
+  // };
+  const dispatch = useDispatch();
 
+  const { userLogin } = useSelector((state) => state.QuanLyNguoiDungReducer);
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      const action = dangNhapAction(values);
+      dispatch(action);
+      console.log("values", values);
+    },
+  });
+  console.log("userLogin", userLogin);
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
@@ -83,7 +101,7 @@ export default function SignIn(props) {
             <Box
               component="form"
               noValidate
-              onSubmit={handleSubmit}
+              onSubmit={formik.handleSubmit}
               sx={{ mt: 1 }}
             >
               <TextField
@@ -93,6 +111,7 @@ export default function SignIn(props) {
                 id="email"
                 label="Email Address"
                 name="email"
+                onChange={formik.handleChange}
                 autoComplete="email"
                 autoFocus
               />
@@ -101,6 +120,7 @@ export default function SignIn(props) {
                 required
                 fullWidth
                 name="password"
+                onChange={formik.handleChange}
                 label="Password"
                 type="password"
                 id="password"
@@ -125,7 +145,7 @@ export default function SignIn(props) {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/sign" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

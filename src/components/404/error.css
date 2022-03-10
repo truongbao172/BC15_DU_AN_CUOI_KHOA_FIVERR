@@ -1,0 +1,25 @@
+#error {
+  background: #2e95ef;
+  width: 100vw;
+  height: 100vh;
+  background-image: -moz-radial-gradient(
+    center 45deg,
+    circle cover,
+    #9bffc5,
+    #2eef78
+  );
+  background-image: -webkit-gradient(
+    radial,
+    50% 50%,
+    0,
+    50% 50%,
+    800,
+    from(#9bff9b),
+    to(#2eef6e)
+  );
+  padding-top: 15%;
+}
+.img-error {
+  width: 300px;
+  height: 300px;
+}
