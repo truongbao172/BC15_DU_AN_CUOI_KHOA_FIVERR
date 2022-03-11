@@ -29,7 +29,7 @@ export default function ListTypeJob(props) {
   }, []);
 
   const arrType = [];
-  // console.log(arrListJob, "bsng");
+
   arrListJob.forEach((result1) => {
     return result1.subTypeJobs.forEach((result2) => {
       return arrType.push(result2.name);
@@ -37,7 +37,7 @@ export default function ListTypeJob(props) {
   });
 
   const renderListTypeJob = () => {
-    return arrListJob?.slice(1, 2).map((item1, index1) => {
+    return arrListJob.slice(1, 2)?.map((item1, index1) => {
       return (
         <div key={index1}>
           <h5>{item1.name}</h5>

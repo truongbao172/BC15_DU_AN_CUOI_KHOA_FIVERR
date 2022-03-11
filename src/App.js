@@ -16,6 +16,8 @@ import { LWTJTemplate } from "./templates/ListWorkTemplate/ListWorlTypeJobTempla
 import ListWorkTypeJobPage from "./pages/ListWorkTypeJobPage";
 import { BackTop } from "antd";
 import error from "./components/404/error";
+import Detail from "./pages/Detail";
+import { DetailTemplate } from "./templates/DetailTemplate/DetailTemplate";
 export const history = createBrowserHistory();
 function App() {
   const styleBTT = {
@@ -36,6 +38,7 @@ function App() {
         <HomeTemplate path="/home" exact Component={HomePage} />
         <Route path="/about" exact component={AboutPage} />
         <Route path="/contact" exact component={ContactPage} />
+        <DetailTemplate path="/detail" exact Component={Detail} />
         <Route path="/404" exact component={error} />
 
         <LWTemplate path="/listwork" exact Component={ListWorkPage} />

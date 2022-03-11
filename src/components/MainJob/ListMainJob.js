@@ -26,7 +26,7 @@ export default function ListMainJob() {
       );
   }, []);
 
-  console.log("danhsahc", arrLWMain);
+  // console.log("danhsahc", arrLWMain);
   const renderLWMain = () => {
     return arrLWMain.slice(10, 30).map((item, index) => {
       return (

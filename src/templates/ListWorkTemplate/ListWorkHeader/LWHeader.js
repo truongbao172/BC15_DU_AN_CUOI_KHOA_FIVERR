@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./LWHeader.css";
 export default function LWHeader(props) {
@@ -14,6 +15,10 @@ export default function LWHeader(props) {
   //   }, []);
 
   // console.log(offset);
+  let usLogin = JSON.parse(localStorage.getItem("USER_LOGIN"));
+  // const { arrListJob } = useSelector((state) => state.ListTypeJobReducer);
+  // console.log(arrListJob);
+
   return (
     <div>
       <div id="LWheader" className="mb-5">
@@ -124,7 +129,7 @@ export default function LWHeader(props) {
                   Become a Seller
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link " to="/sign">
                   Sign In
                 </NavLink>
@@ -133,7 +138,33 @@ export default function LWHeader(props) {
                 <NavLink className="nav-link join-link" to="/join">
                   Join
                 </NavLink>
-              </li>
+              </li> */}
+              {usLogin?.email ? (
+                <div>
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link text-dark "
+                      style={{ fontSize: "20px", fontFamily: "Macan" }}
+                      to="/404"
+                    >
+                      Hi! {usLogin?.email}
+                    </NavLink>
+                  </li>
+                </div>
+              ) : (
+                <>
+                  <li className="nav-item">
+                    <NavLink className="nav-link " to="/sign">
+                      Sign In
+                    </NavLink>
+                  </li>
+                  <li className="nav-item join-btn">
+                    <NavLink className="nav-link join-link" to="/join">
+                      Join
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </nav>

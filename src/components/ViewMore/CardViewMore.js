@@ -73,13 +73,13 @@ export default function CardViewMore(props) {
 
             <div className="col-9 c-name">
               <h6>
-                <a>{props.item.subType?.name}</a>
+                <a href="/detail">{props.item.subType?.name}</a>
               </h6>
               <span>Lever 2 seller</span>
             </div>
           </div>
           <div className="card_title">
-            <a>{props.item.name}</a>
+            <a href="detail">{props.item.name}</a>
           </div>
           <div className="c_rate">
             <ul>

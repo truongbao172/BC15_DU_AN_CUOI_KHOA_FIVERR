@@ -37,15 +37,6 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn(props) {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   // eslint-disable-next-line no-console
-  //   console.log({
-  //     email: data.get("email"),
-  //     password: data.get("password"),
-  //   });
-  // };
   const dispatch = useDispatch();
 
   const { userLogin } = useSelector((state) => state.QuanLyNguoiDungReducer);
@@ -61,7 +52,6 @@ export default function SignIn(props) {
       console.log("values", values);
     },
   });
-  console.log("userLogin", userLogin);
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
@@ -150,7 +140,7 @@ export default function SignIn(props) {
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
+              {/* <Copyright sx={{ mt: 5 }} /> */}
             </Box>
           </Box>
         </Grid>

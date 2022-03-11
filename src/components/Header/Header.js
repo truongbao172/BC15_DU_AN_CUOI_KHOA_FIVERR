@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 export default function Header(props) {
   let scrollClass = "trcscroll";
   const [offset, setOffset] = useState(0);
+  // console.log(props);
 
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
@@ -13,7 +15,6 @@ export default function Header(props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // console.log(offset);
   return (
     <div>
       <div id="header" className={`fixed-top ${offset > 0 ? "scroll" : " "}`}>
@@ -140,24 +141,43 @@ export default function Header(props) {
                   Become a Seller
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink
-                  className={`nav-link  ${offset > 0 ? "navL_scroll" : " "}`}
-                  to="/sign"
-                >
-                  Sign In
-                </NavLink>
-              </li>
-              <li className="nav-item join-btn">
-                <NavLink
-                  className={`nav-link join-link ${
-                    offset > 0 ? "navL_scroll" : " "
-                  }`}
-                  to="/join"
-                >
-                  Join
-                </NavLink>
-              </li>
+              {props.email ? (
+                <div>
+                  <li className="nav-item">
+                    <NavLink
+                      className={`nav-link userlogin ${
+                        offset > 0 ? "navL_scroll" : " "
+                      }`}
+                      to="/404"
+                    >
+                      Hi! {props?.email}
+                    </NavLink>
+                  </li>
+                </div>
+              ) : (
+                <>
+                  <li className="nav-item">
+                    <NavLink
+                      className={`nav-link  ${
+                        offset > 0 ? "navL_scroll" : " "
+                      }`}
+                      to="/sign"
+                    >
+                      Sign In
+                    </NavLink>
+                  </li>
+                  <li className="nav-item join-btn">
+                    <NavLink
+                      className={`nav-link join-link ${
+                        offset > 0 ? "navL_scroll" : " "
+                      }`}
+                      to="/join"
+                    >
+                      Join
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </nav>
